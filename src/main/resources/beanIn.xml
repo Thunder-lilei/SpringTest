@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    &lt;!&ndash; 内部bean &ndash;&gt;-->
+<!--    <bean id="emp" class="pers.lilei.test.po.Emp">-->
+<!--        <property name="ename" value="李雷"></property>-->
+<!--        <property name="gender" value="男"></property>-->
+<!--        &lt;!&ndash; 设置对象类型属性 &ndash;&gt;-->
+<!--        <property name="dept">-->
+<!--            <bean id="dept" class="pers.lilei.test.po.Dept">-->
+<!--                <property name="dname" value="研发"></property>-->
+<!--            </bean>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+<!--    &lt;!&ndash; 内部bean &ndash;&gt;-->
+<!--    <bean id="emp" class="pers.lilei.test.po.Emp">-->
+<!--        <property name="ename" value="李雷"></property>-->
+<!--        <property name="gender" value="男"></property>-->
+<!--        &lt;!&ndash; 级联赋值 &ndash;&gt;-->
+<!--        <property name="dept" ref="dept"></property>-->
+<!--    </bean>-->
+<!--    <bean id="dept" class="pers.lilei.test.po.Dept">-->
+<!--        <property name="dname" value="财务"></property>-->
+<!--    </bean>-->
+
+    <!-- 内部bean -->
+    <bean id="emp" class="pers.lilei.test.po.Emp">
+        <property name="ename" value="李雷"></property>
+        <property name="gender" value="男"></property>
+        <!-- 级联赋值 -->
+        <property name="dept" ref="dept"></property>
+        <property name="dept.dname" value="技术部"></property>
+    </bean>
+    <bean id="dept" class="pers.lilei.test.po.Dept">
+    </bean>
+</beans>

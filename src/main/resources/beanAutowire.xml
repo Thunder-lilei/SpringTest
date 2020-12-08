@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 自动装配
+     autowire属性
+     byName属性名 注入值bean_id和类中的属性名称要一致
+     byType属性类型
+     -->
+
+<!--    <bean id="emp" class="pers.lilei.test.autowire.Emp" autowire="byName">-->
+<!--&lt;!&ndash;        <property name="dept" ref="dept"></property>&ndash;&gt;-->
+<!--    </bean>-->
+<!--    <bean id="dept" class="pers.lilei.test.autowire.Dept"></bean>-->
+
+    <bean id="emp" class="pers.lilei.test.autowire.Emp" autowire="byType">
+        <!--        <property name="dept" ref="dept"></property>-->
+    </bean>
+    <bean id="dept" class="pers.lilei.test.autowire.Dept"></bean>
+</beans>

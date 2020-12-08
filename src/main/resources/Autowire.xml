@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- 开启组件扫描 多个包 -->
+    <!-- 第一种 逗号隔开 -->
+<!--    <context:component-scan base-package="pers.lilei.test.dao,pers.lilei.test.service"></context:component-scan>-->
+    <!-- 第二种 扫描上层目录 -->
+    <context:component-scan base-package="pers.lilei.test"></context:component-scan>
+
+</beans>

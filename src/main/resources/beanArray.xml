@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 集合类型属性注入 -->
+    <bean id="data" class="pers.lilei.test.po.Data">
+        <!-- 数组类型属性注入 -->
+        <property name="strings">
+            <array>
+                <value>1</value>
+                <value>2</value>
+                <value>3</value>
+            </array>
+        </property>
+        <!-- list类型属性注入 -->
+        <property name="list">
+            <list>
+                <value>11</value>
+                <value>22</value>
+                <value>33</value>
+            </list>
+        </property>
+        <!-- list类型属性注入 值是对象 -->
+        <property name="listData">
+            <list>
+                <ref bean="listData1"></ref>
+                <ref bean="listData2"></ref>
+            </list>
+        </property>
+        <!-- map类型属性注入 -->
+        <property name="map">
+            <map>
+                <entry key="1" value="1"></entry>
+                <entry key="2" value="2"></entry>
+                <entry key="3" value="3"></entry>
+            </map>
+        </property>
+        <!-- set类型属性注入 -->
+        <property name="set">
+            <set>
+                <value>111</value>
+                <value>222</value>
+                <value>333</value>
+            </set>
+        </property>
+    </bean>
+
+    <!-- 创建多个listData对象 -->
+    <bean id="listData1" class="pers.lilei.test.po.ListData">
+        <property name="name" value="001"></property>
+    </bean>
+    <bean id="listData2" class="pers.lilei.test.po.ListData">
+        <property name="name" value="002"></property>
+    </bean>
+</beans>
